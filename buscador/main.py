@@ -69,17 +69,16 @@ class localizador_de_links:
         self.visited_urls = set() # guarda as urls visitadas
         self.start_url = start_url
         self.max_depth = max_depth
-        self.cache_name = 'cache'
         self.session = None
 
     def get_links(self, url):
         session = self.get_session()
         res = session.get(url)
         soup = BeautifulSoup(res.content, 'html.parser')
-        links = soup.find_all("a")
+        #links = soup.find_all("a")
 
         links = []
-        for link in links:
+        for link in soup.find_all("a"):
             href = link.get('href')
 
             if href is not None:
@@ -89,10 +88,10 @@ class localizador_de_links:
 
         return links
 
-    def get_session(self):
+    def get_session(self): # faz com que armazene em cache as páginas da web que foram acessadas anteriormente 
         if not self.session:
-            requests_cache.install_cache(self.cache_name)
-            self.session = requests_cache.CachedSession()
+            requests_cache.install_cache('cache')
+            self.session = requests_cache.CachedSession() # ao obter a sessão http, todas as solicit. subseq. se está armazenada em cache
         return self.session
 
     def absolute_url(self, url, base_url):
@@ -164,14 +163,12 @@ class localizador_de_links:
         return array_links
         """
 
-#busca = localizador_de_links("http://127.0.0.1:5500/buscador/html/main.html", 0)
-busca = localizador_de_links("https://en.wikipedia.org/wiki/Main_Page", max_depth=1)
-
-# for i in busca:
-# print(busca.buscar_links("http://127.0.0.1:5500/buscador/html/main.html"))
-
-links = busca.search()
-print(links)
+url = "http://127.0.0.1:5500/buscador/html/main.html"
+findLinks = localizador_de_links(url, max_depth=2)
+results = findLinks.search()
+print(len(results))
+for link in results:
+    print(link)
 
 """
 def search(key, url, depth):
