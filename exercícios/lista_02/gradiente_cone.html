@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de Gradiente de Cone</title>
+	<style>
+        html,
+        bodY {
+            height: 100%;
+        }
+		body {
+            display: flex;
+			align-items: center;
+			justify-content: center;
+			background-image: conic-gradient(from 45deg, #FFA07A, #FF7F50, #FF6347, #FF4500, #FFDAB9, #FFA500, #FF8C00, #FFA07A);
+            text-align: center;
+		}
+		h1 {
+			color: white;
+			font-size: 2rem;
+			transform-origin: center;
+			position:absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(0deg);
+			animation: spin 10s linear infinite;
+		}
+		@keyframes spin {
+			from {
+				transform: translate(-50%, -50%) rotate(0deg);
+			}
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>#### Gradiente de Cone ####</h1>
+</body>
+</html>
