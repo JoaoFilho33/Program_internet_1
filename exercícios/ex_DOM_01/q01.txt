@@ -1,0 +1,6 @@
+1)
+Dom significa Document Object Model, e representa uma interface de programação que os navegadores 
+utilizam para representar páginas na web. E oferece um modelo de representação do documento HTML e 
+XML, estruturando-se em formato de árvores, com vários galhos que indicam diferentes elementos da 
+página.
+

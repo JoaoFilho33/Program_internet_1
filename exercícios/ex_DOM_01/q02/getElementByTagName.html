@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>A</h1>
+
+    <h1>B</h1>
+
+    <h1>C</h1>
+
+    <script>
+        let titulo = document.getElementsByTagName("h1")
+
+        for(let i = 0; i < titulo.length; i++) {
+            if (titulo[i].innerHTML.includes("A")) {
+                titulo[i].innerHTML = "Aqui tinha uma vogal 'A'"
+            }
+        }
+
+    </script>
+
+</body>
+</html>

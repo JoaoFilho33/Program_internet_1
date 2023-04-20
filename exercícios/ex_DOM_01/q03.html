@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemplo de uso do DOM</title>
+</head>
+
+<body>
+    <h1>Exemplo de uso do DOM</h1>
+
+    <p id="paragrafo">Clique no botão abaixo para alterar o texto deste parágrafo:</p>
+
+    <button id="botao">Clique aqui</button>
+    <button id="limpar">Limpar</button>
+
+    <script src="script.js"></script>
+
+    <script>
+        // selecione o botão usando o método getElementById
+        let botao = document.getElementById("botao");
+        let botaoLimpar = document.getElementById("limpar")
+
+        // adicione um evento de clique ao botão
+        botao.addEventListener("click", function () {
+            // selecione o parágrafo usando o método getElementById
+            var paragrafo = document.getElementById("paragrafo");
+            // altere o texto do parágrafo
+            paragrafo.textContent = "O texto deste parágrafo foi alterado!";
+        });
+
+        botaoLimpar.addEventListener("click", function () {
+            var paragrafo = document.getElementById("paragrafo");
+            paragrafo.textContent = "";
+        });
+    </script>
+
+</body>
+
+</html>

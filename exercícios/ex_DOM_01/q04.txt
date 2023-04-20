@@ -1,0 +1,9 @@
+04)
+O "textContent" pode substituir todo o conteúdo de um elemento HTML por um outro texto.
+Ex: se existir um texto identificado por um ID eu posso alterar todo o seu conteúdo com simplesmente
+
+    <p id="conteudo">Texto atual</p>
+
+    let conteudo = document.getElementById("conteudo");
+
+    conteudo.textContent = "Novo texto" -> o que antes tinha "Texto atual" agora tem "Novo texto"
