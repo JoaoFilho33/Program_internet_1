@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página matemática</title>
+</head>
+
+<body>
+    <h1>Campos de multiplicação</h1>
+
+    <label for="campo1">Valor 1:</label>
+    <input type="number" id="campo1">
+
+    <label for="campo2">Valor 2:</label>
+    <input type="number" id="campo2">
+
+    <button id="botaoCalcular">Calcular</button>
+
+    <div class="exibir" , id="resultado"></div>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let botaoCalcular = document.getElementById('botaoCalcular');
+            botaoCalcular.addEventListener('click', calcular)
+        })
+
+        function calcular() {
+            let campo1 = document.getElementById('campo1').value;
+            let campo2 = document.getElementById('campo2').value;
+
+            if (isNaN(campo1) || isNaN(campo2)) {
+                alert("Digite um número");
+            }
+
+            let result = Number(campo1) * Number(campo2);
+            document.getElementById('resultado').innerHTML = result;
+        }
+
+
+    </script>
+</body>
+
+</html>
