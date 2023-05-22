@@ -1,6 +1,3 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
-
 interface Post {
     id: number
     text: string
@@ -41,8 +38,8 @@ export default class Microblog {
     }
 }
 
-// class MicroblogPersist extends Microblog {
+class MicroblogPersist extends Microblog {
     
-// }
+}
 
 module.exports = Microblog

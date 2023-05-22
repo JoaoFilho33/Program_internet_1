@@ -1,7 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const client_1 = require("@prisma/client");
-const prisma = new client_1.PrismaClient();
 class Microblog {
     constructor() {
         this.posts = [];
@@ -29,7 +27,7 @@ class Microblog {
     }
 }
 exports.default = Microblog;
-// class MicroblogPersist extends Microblog {
-// }
+class MicroblogPersist extends Microblog {
+}
 module.exports = Microblog;
 //# sourceMappingURL=main.js.map
