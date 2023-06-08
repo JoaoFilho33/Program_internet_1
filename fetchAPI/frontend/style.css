@@ -1,0 +1,121 @@
+/* Global styles */
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+}
+
+header p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+
+#redinha{
+    max-width: 100px;
+
+}
+
+/* Main section */
+#new-post {
+    margin-bottom: 30px;
+}
+
+#new-post h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#new-post input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #1433be;
+    border-radius: 15px;
+    
+}
+#new-post textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #67e68b;
+    border-radius: 15px;
+   
+}
+
+#new-post textarea {
+    resize: vertical;
+}
+
+#new-post button {
+    padding: 10px 20px;
+    background-color: #3755af;
+    color: #e1e1e1;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+   
+    
+}
+
+#new-post button:hover {
+    background-color: #eb3535;
+    opacity: 0.5;
+
+}
+
+#timeline {
+    margin-bottom: 30px;
+}
+
+#timeline h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.post p {
+    font-size: 16px;
+    color: #050308;
+    margin-bottom: 10px;
+}
+
+.post p a {
+    color: #623333;
+    text-decoration: none;
+}
+
