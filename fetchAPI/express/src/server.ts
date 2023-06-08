@@ -1,11 +1,15 @@
 import express, { Request, Response } from 'express';
 import MicroblogPersist, { Post } from './main';
+import cors from 'cors';
 
 const app = express();
 const microblogPersist = new MicroblogPersist();
 
 microblogPersist.initialize();
 
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -1,13 +1,3 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  // Adicionar ouvinte de evento ao botão de adicionar postagem
-  const addPostButton = document.getElementById('add-post');
-  addPostButton.addEventListener('click', addPost);
-
-  // Chamar a função para buscar os posts existentes
-  await getPosts();
-});
-
-
 const getPosts = async () => {
   try {
     const response = await fetch('http://localhost:3000/posts');
@@ -96,3 +86,12 @@ const appendPost = (post) => {
   document.getElementById('timeline').appendChild(postElement);
 };
 
+
+document.addEventListener('DOMContentLoaded', async () => {
+  // Adicionar ouvinte de evento ao botão de adicionar postagem
+  const addPostButton = document.getElementById('add-post');
+  addPostButton.addEventListener('click', addPost);
+
+  // Chamar a função para buscar os posts existentes
+  await getPosts();
+});
